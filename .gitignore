@@ -33,3 +33,5 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+/prisma/migrations/20231128122842_init/migration.sql
+/prisma/migrations/migration_lock.toml
