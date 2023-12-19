@@ -5,7 +5,7 @@ import { PrismaModule } from '../prisma/prisma.module';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 
-export const jwtSecret = 'ZJ80h6Zo5lo_Z!2j'; // any string to make a secret jwt
+export const jwtSecret = 'Fj8Uz_d9Q4SrCcXM8Y2jqj4VOSQ67vPfaSyhJpOCL3s'; // any string to make a secret jwt
 
 @Module({
   imports: [
