@@ -4,6 +4,8 @@ import { AuthController } from './auth.controller';
 import { PrismaModule } from '../prisma/prisma.module';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
+import { UsersModule } from '../users/users.module';
+import { JwtStrategy } from './jwt.strategy';
 
 export const jwtSecret = 'Fj8Uz_d9Q4SrCcXM8Y2jqj4VOSQ67vPfaSyhJpOCL3s'; // any string to make a secret jwt
 
@@ -15,8 +17,9 @@ export const jwtSecret = 'Fj8Uz_d9Q4SrCcXM8Y2jqj4VOSQ67vPfaSyhJpOCL3s'; // any s
       secret: jwtSecret,
       signOptions: { expiresIn: '5m' },
     }),
+    UsersModule,
   ],
   controllers: [AuthController],
-  providers: [AuthService],
+  providers: [AuthService, JwtStrategy],
 })
 export class AuthModule {}
